@@ -19,12 +19,19 @@ function GetTopics() {
   .catch(error => console.error('Error fetching local data:', error));
 }
 
-function selectTopic(topic) {
-    selectedTopic = topic;
+function selectTopic() {
+
+    selectedTopic = document.getElementById("game-theme").value;
     if (document.getElementById('game-time').selectedIndex != 0)
       {
-        GetTopics()
-        startGame()
+        if (document.getElementById('game-theme').selectedIndex != 0)
+          {
+            GetTopics()
+            startGame()
+          }
+          else {
+            alert("請選擇遊戲主題 ! ");
+          }
       }
     else {
         alert("請選擇遊戲時間 ! ");

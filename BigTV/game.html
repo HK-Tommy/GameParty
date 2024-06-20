@@ -18,15 +18,22 @@
                         <option value="300">300 秒</option>
                     </select>
                 </div>
-            <button class="topic-button" onclick="selectTopic('水果')">水果</button>
-            <button class="topic-button" onclick="selectTopic('職業')">職業</button>
-            <button class="topic-button" onclick="selectTopic('隨機')">隨機</button>
-            <button class="topic-button" onclick="selectTopic('動漫')">動漫</button>
-            <button class="topic-button" onclick="selectTopic('台灣文化')">台灣文化</button>
-            <button class="topic-button" onclick="selectTopic('香港文化')">香港文化</button>
-            <button class="topic-button" onclick="selectTopic('四字成語')">四字成語</button>
-            <button class="topic-button" onclick="selectTopic('節日')">節日</button>
-            <button class="topic-button" onclick="selectTopic('卡通人物')">卡通人物</button>
+                <br>
+                <div class="custom-select" style="width:250px;">
+                    <select id="game-theme">
+                        <option value="隨機">請選擇遊戲主題</option>
+                        <option value="隨機">隨機</option>
+                        <option value="水果">水果</option>
+                        <option value="職業">職業</option>
+                        <option value="職業">動漫</option>
+                        <option value="職業">香港文化</option>
+                        <option value="職業">台灣文化</option>
+                        <option value="職業">四字成語</option>
+                        <option value="職業">節日</option>
+                        <option value="職業">卡通人物</option>
+                    </select>
+                </div>
+            <button class="topic-button" onclick="selectTopic()">開始</button>
         </div>
 
         <div id="pre-game-screen" style="display:none;">
