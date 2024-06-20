@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大電視遊戲</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="selection-screen">
+                <h1>選擇遊戲設定</h1>
+                <div class="custom-select" style="width:250px;">
+                    <select id="game-time">
+                        <option value="0">請選擇遊戲時間</option>
+                        <option value="60">60 秒</option>
+                        <option value="120">120 秒</option>
+                        <option value="300">300 秒</option>
+                    </select>
+                </div>
+            <button class="topic-button" onclick="selectTopic('水果')">水果</button>
+            <button class="topic-button" onclick="selectTopic('職業')">職業</button>
+            <button class="topic-button" onclick="selectTopic('隨機')">隨機</button>
+        </div>
+
+        <div id="pre-game-screen" style="display:none;">
+            <h2>點擊任意畫面開始遊戲</h2>
+        </div>
+
+        <div id="countdown-screen" style="display:none;">
+            <h1 id="countdown">3</h1>
+        </div>
+
+        <div id="game-screen" style="display:none;">
+            <div id="timer"></div>
+            <div id="question"></div>
+            <div id="controls">
+                <button onclick="handleAnswer(true)">答對</button>
+                <button onclick="handleAnswer(false)">答錯</button>
+                <button onclick="skipQuestion()">跳過</button>
+            </div>
+        </div>
+
+        <div id="result-screen" style="display:none;">
+            <h1>遊戲結束</h1>
+            <div id="results">
+                <div id="result_correct"></div>
+                <div id="result_wrong"></div>
+                <div id="result_skip"></div>
+            </div>
+            <br>
+            <button onclick="resetGame()">重玩</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
