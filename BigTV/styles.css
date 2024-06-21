@@ -209,7 +209,7 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media only screen and (min-width: 480px) {
   #question {
     font-size: 50px;
     color: white;
