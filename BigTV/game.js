@@ -14,7 +14,7 @@ function GetTopics() {
   .then(data => {
     // topics
     topics = data;
-    console.log(topics);
+    //console.log(topics);
   })
   .catch(error => console.error('Error fetching local data:', error));
 }
@@ -39,6 +39,9 @@ function selectTopic() {
 }
 
 function startGame() {
+  if ((document.getElementById('game-time').value) === "unlimited") {
+    document.getElementById('timer').style.display = 'none';
+  }
     gameTime = parseInt(document.getElementById('game-time').value);
     document.getElementById('selection-screen').style.display = 'none';
     document.getElementById('pre-game-screen').style.display = 'block';
@@ -74,24 +77,35 @@ function startGamePlay() {
     skipAnswers = 0;
     clicks = 0;
     document.getElementById('game-screen').style.display = 'block';
+      if(gameTime != "unlimited") {
+        timerInterval = setInterval(() => {
+          gameTime--;
+  
+          if (gameTime <= 0) {
+              clearInterval(timerInterval);
+              endGame();
+          }
+  
+          document.getElementById('timer').innerText = `剩餘時間: ${gameTime}秒`;
+        }, 1000);
+      }
     loadQuestion();
-
-    timerInterval = setInterval(() => {
-        gameTime--;
-
-        if (gameTime <= 0) {
-            clearInterval(timerInterval);
-            endGame();
-        }
-
-        document.getElementById('timer').innerText = `剩餘時間: ${gameTime}秒`;
-    }, 1000);
 }
 
 function loadQuestion() {
     const questions = topics[selectedTopic];
     const question = questions[Math.floor(Math.random() * questions.length)];
     document.getElementById('question').innerText = question;
+    const questionIndex = questions.indexOf(question);
+
+    if (questionIndex !== -1) {
+        // 移除該問題
+        questions.splice(questionIndex, 1);
+    }
+    else {
+      alert("沒有題目可用 ! ")
+      endGame()
+    }
 }
 
 function handleAnswer(isCorrect) {
@@ -103,18 +117,12 @@ function handleAnswer(isCorrect) {
       wrongAnswers++;
     }
     loadQuestion();
-    updateStats();
 }
 
 function skipQuestion() {
     clicks++;
     skipAnswers++;
     loadQuestion();
-    updateStats();
-}
-
-function updateStats() {
-    document.getElementById('stats').innerText = `答對: ${correctAnswers}, 點擊: ${clicks}`;
 }
 
 function endGame() {
