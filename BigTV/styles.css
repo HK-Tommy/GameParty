@@ -28,7 +28,7 @@ h1, h2 {
   }
   
   .custom-select select {
-    display: none; /*hide original SELECT element: */
+    display: none;
   }
   
   .select-selected {
