@@ -31,7 +31,7 @@ function GetParams() {
 GetParams();
 
 function GetTopics() {
-  fetch('questions.json')
+  fetch('../BigTV/json/questions.json')
   .then(response => response.json())
   .then(data => {
     // topics
