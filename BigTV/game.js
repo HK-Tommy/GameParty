@@ -150,8 +150,8 @@ function skipQuestion() {
 function endGame() {
     document.getElementById('game-screen').style.display = 'none';
     document.getElementById('result-screen').style.display = 'block';
-    document.getElementById('result_correct').innerText = `答對: ${correctAnswers}`;
-    document.getElementById('result_wrong').innerText = `答錯: ${wrongAnswers}`;
+    document.getElementById('result_correct').innerText = `正確: ${correctAnswers}`;
+    document.getElementById('result_wrong').innerText = `錯誤: ${wrongAnswers}`;
     document.getElementById('result_skip').innerText = `跳過: ${skipAnswers}`;
 }
 
