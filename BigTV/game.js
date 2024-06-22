@@ -8,6 +8,28 @@ let skipAnswers = 0;
 let clicks = 0;
 
 let topics;
+
+function GetParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+        const timeParam = urlParams.get('time');
+        const themeParam = urlParams.get('theme');
+
+        // 获取select元素
+        const timeSelect = document.getElementById('game-time');
+        const themeSelect = document.getElementById('game-theme');
+
+        // 如果参数值在select选项中，则填充到select元素中
+        if (timeParam && Array.from(timeSelect.options).some(option => option.value === timeParam)) {
+            timeSelect.value = timeParam;
+        }
+
+        if (themeParam && Array.from(themeSelect.options).some(option => option.value === themeParam)) {
+            themeSelect.value = themeParam;
+        }
+}
+
+GetParams();
+
 function GetTopics() {
   fetch('questions.json')
   .then(response => response.json())
