@@ -13,6 +13,7 @@ function selection_change() {
             document.getElementById("status").innerText = "數字已刷新 ! ";
             onSelect = true
             document.getElementById("control").style.display = "block";
+            document.getElementById("backButton").style.display = "none";
         }
 }
 
@@ -55,4 +56,5 @@ function resetGame(){
     document.getElementById("input").value = ""
     document.getElementById("control").style.display = "none";
     document.getElementById("status").innerText = ``;
+    document.getElementById("backButton").style.display = "block";
 }

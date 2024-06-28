@@ -68,15 +68,6 @@ body {
     background: var(--background-gradient);
   }
   
-  a {
-    font-weight: bold;
-    color: var(--gray);
-    text-decoration: drop-shadow;
-    padding: .25em;
-    border-radius: .50em;
-    background: pink;
-  }
-  
   .container {
     position : absolute;
     top: 50%;
