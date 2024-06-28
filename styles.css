@@ -10,10 +10,11 @@ body {
     margin: 0;
 }
 
-h1, h2 {
-    color: wheat;
+h1{
+    color: rgb(32, 249, 191);
     font-size: 50px;
     margin: 0;
+    font-family: Font_Logo;
 }
 p {
     color: rgb(228, 185, 105);
@@ -65,6 +66,11 @@ footer {
   padding: 1em;
   margin: 10px;
   color: white;
-  font-size: 10px;
+  font-size: 8px;
 
+}
+
+@font-face {
+  font-family: Font_Logo;
+  src: url("./Assets/Fonts/Radeil3DDemoRuderight-4n7xD.otf");
 }
