@@ -23,14 +23,24 @@
                   <option value="100">數字範圍 : 1 - 100</option>
                   <option value="200">數字範圍 : 1 - 200</option>
                   <option value="300">數字範圍 : 1 - 300</option>
+                  <option value="400">數字範圍 : 1 - 400</option>
+                  <option value="500">數字範圍 : 1 - 500</option>
                 </select>
             </div>
             <div id="status"></div>
             
-            <input type="number" id="input" onfocus="input_onFocus()"/>
-            <button class="confirm_button" role="button" onclick="confirm()">確定</button>
+            <div id="control">
+                <input type="number" id="input" onfocus="input_onFocus()"/>
+                <button id='confirmButton' class="confirm_button" role="button" onclick="confirm()">確定</button>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <p>Version : 1.3</p>
+        <p>Last Update : 28/6/2024 20:58</p>
+        <p>Copyright © 2024 GameParty. All rights reserved.</p>
+    </footer>
     <script src="../GuessNumber/js/script.js"></script>
 </body>
 </html>

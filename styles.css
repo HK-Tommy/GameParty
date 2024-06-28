@@ -56,3 +56,15 @@ button:active {
   transform: translateY(10px);
   transition: 100ms;
 }
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: left;
+  padding: 1em;
+  margin: 10px;
+  color: white;
+  font-size: 10px;
+
+}

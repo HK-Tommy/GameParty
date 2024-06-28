@@ -5,13 +5,14 @@ function selection_change() {
     max = document.getElementById("number_select").value;
     if (max == 0)
         {
-            document.getElementById("status").innerText = "數字未刷新 ! ";
+           resetGame()
         }
     else
         {
             randomNumber = Math.floor(Math.random() * max);
             document.getElementById("status").innerText = "數字已刷新 ! ";
             onSelect = true
+            document.getElementById("control").style.display = "block";
         }
 }
 
@@ -33,8 +34,8 @@ function confirm() {
             } 
             else
             {
-                document.getElementById("status").innerText = `答對了 !`; 
-                randomNumber = 0
+                alert("答對了 ! ")
+                resetGame()
             }
         }
         
@@ -46,4 +47,12 @@ function input_onFocus() {
         document.getElementById("status").innerText = ``;
         onSelect = false
     }
+}
+
+function resetGame(){
+    randomNumber = 0
+    document.getElementById("number_select").value = 0
+    document.getElementById("input").value = ""
+    document.getElementById("control").style.display = "none";
+    document.getElementById("status").innerText = ``;
 }
