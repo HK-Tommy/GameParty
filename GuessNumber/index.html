@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="數字炸彈, 免費線上遊戲, GameParty, GameParty免費線上遊戲">
+    <title>數字炸彈 | GameParty免費線上遊戲</title>
+    <link rel="stylesheet" href="../GuessNumber/css/styles.css">
+    <link rel="icon" href="../GuessNumber/img/GuessNumber_Logo.png" type="image/icon type">
+</head>
+<body>
+    <div id="game-container">
+        <div id="game-title">
+                <img src="../GuessNumber/img/GuessNumber_Logo.png" style="height: 120px;" alt="「無敵大電視」免費線上遊戲 Logo">
+                <h1>數字炸彈 - 猜數字遊戲</h1>
+        </div>
+        <div id="game-selection">
+            <div class="select" onchange="selection_change()">
+                <select id="number_select">
+                  <option value="0">請選擇數字範圍</option>
+                  <option value="50">數字範圍 : 1 - 50</option>
+                  <option value="100">數字範圍 : 1 - 100</option>
+                  <option value="200">數字範圍 : 1 - 200</option>
+                  <option value="300">數字範圍 : 1 - 300</option>
+                </select>
+            </div>
+            <div id="status"></div>
+            
+            <input type="number" id="input" onfocus="input_onFocus()"/>
+            <button class="confirm_button" role="button" onclick="confirm()">確定</button>
+        </div>
+    </div>
+
+    <script src="../GuessNumber/js/script.js"></script>
+</body>
+</html>
