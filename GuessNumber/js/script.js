@@ -1,4 +1,5 @@
 let randomNumber = 0;
+let onSelect;
 
 function selection_change() {
     max = document.getElementById("number_select").value;
@@ -10,6 +11,7 @@ function selection_change() {
         {
             randomNumber = Math.floor(Math.random() * max);
             document.getElementById("status").innerText = "數字已刷新 ! ";
+            onSelect = true
         }
 }
 
@@ -40,6 +42,8 @@ function confirm() {
 }
 
 function input_onFocus() {
-    document.getElementById("status").innerText = ``;
-    console.log("d")
+    if (onSelect) {
+        document.getElementById("status").innerText = ``;
+        onSelect = false
+    }
 }
