@@ -52,7 +52,7 @@ function selectTopic() {
             startGame()
           }
           else {
-            alert("請選擇遊戲主題 ! ");
+            alert("請選擇題目主題 ! ");
           }
       }
     else {
@@ -151,7 +151,6 @@ function endGame() {
     document.getElementById('game-screen').style.display = 'none';
     document.getElementById('result-screen').style.display = 'block';
     document.getElementById('result_correct').innerText = `正確: ${correctAnswers}`;
-    document.getElementById('result_wrong').innerText = `錯誤: ${wrongAnswers}`;
     document.getElementById('result_skip').innerText = `跳過: ${skipAnswers}`;
 }
 

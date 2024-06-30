@@ -15,14 +15,34 @@
                 <img src="../BigTV/img/BigTV_Logo.png" style="height: 120px;" alt="「無敵大電視」免費線上遊戲 Logo">
                 <h1>無敵大電視</h1>
             <button onclick="redirect()">開始</button>
+            <a id="gameplay_button" onclick="gameplay()">遊戲玩法</a>
+            <br>
+            <a id="gameplay_button" onclick="gameinfo()">遊戲資訊</a>
+            <br>
+            <br>
+            <a id="gameplay_button" href="../index.html" style="text-decoration: none;">返回GameParty</a>
         </div>
-    <footer>
-        <p>Version : 1.6</p>
-        <p>Last Update : 29/6/2024 00:45</p>
-        <p>Copyright © 2024 <a href="../index.html" style="color: white;">GameParty</a>. All rights reserved.</p>
-        <p>Background Image by <a href="https://www.pngtree.com" style="color: white;">Pngtree.com</a></p>
-        <p>Game Logo by <a href="https://www.vecteezy.com/free-vector/tv-logo" style="color: white;">Vecteezy</a></p>
-    </footer>
+        <div id="gameplay" style="display: none;">
+            <h1>遊戲玩法</h1>
+            <p>1. 遊戲開始前選擇遊戲時間及題目主題。</p>
+            <p>2. 玩家根據題目來形容/做手勢等 (不可直接說出題目) 傳達給另外一名負責「猜」的玩家。</p>
+            <p>3. 猜對了按下「正確」按鈕，否則可選擇「跳過」按鈕。</p>
+            <p>4. 時間結束後將結算正確和跳過的次數。</p>
+            <br>
+            <a id="gameplay_button" href="./index.html" style="text-decoration: none;">返回遊戲</a>
+        </div>
+        <div id="gameinfo" style="display: none;">
+            <h1>遊戲資訊</h1>
+            <p>Version : 1.7</p>
+            <p>Last Update : 30/6/2024 23:30</p>
+            <p>Copyright © 2024 <a href="../index.html" style="color: white;">GameParty</a>. All rights reserved.</p>
+            <p>Background Image by <a href="https://www.pngtree.com" style="color: white;">Pngtree.com</a></p>
+            <p>Game Logo by <a href="https://www.vecteezy.com/free-vector/tv-logo" style="color: white;">Vecteezy</a></p>
+            <br>
+            <a id="gameplay_button" href="./index.html" style="text-decoration: none;">返回遊戲</a>
+        </div>
+    </div>
+
 
     <script src="../BigTV/js/index.js"></script>
 </body>

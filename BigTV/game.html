@@ -25,7 +25,7 @@
                 <br>
                 <div class="custom-select" style="width:250px;">
                     <select id="game-theme">
-                        <option value="隨機">請選擇遊戲主題</option>
+                        <option value="隨機">請選擇題目主題</option>
                         <option value="隨機">隨機</option>
                         <option value="水果">水果</option>
                         <option value="職業">職業</option>
@@ -63,7 +63,6 @@
             <div id="question"></div>
             <div id="controls">
                 <button onclick="handleAnswer(true)">正確</button>
-                <button onclick="handleAnswer(false)">錯誤</button>
                 <button onclick="skipQuestion()">跳過</button><br>
             </div>
         </div>
@@ -72,7 +71,6 @@
             <h1>遊戲結束</h1>
             <div id="results">
                 <div id="result_correct"></div>
-                <div id="result_wrong"></div>
                 <div id="result_skip"></div>
             </div>
             <br>

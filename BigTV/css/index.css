@@ -67,13 +67,43 @@ button:hover {
 }
 
 footer {
-  text-align: center;
+  /*text-align: center;
   padding: 3px;
   color: white;
+  font-size: 10px;*/
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: left;
+  padding: 1em;
+  margin: 10px;
+  color: white;
   font-size: 12px;
+  text-indent: 10px;
 }
 
 button {
   background-color: white;
 
+}
+#gameplay_button {     
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;  
+  color: #00DDEB;   
+  font-size: 20px;  
+}
+
+p {
+  color: white;
+}
+
+#gameplay {
+  text-align: left;
+}
+
+#gameinfo {
+  text-align: left;
 }
