@@ -1,6 +1,21 @@
 let randomNumber = 0;
 let onSelect;
 
+function GetParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const numberParam = urlParams.get('number');
+  
+    // 获取select元素
+    const numberSelect = document.getElementById('number_select');
+  
+    // 如果参数值在select选项中，则填充到select元素中
+    if (numberParam && Array.from(numberSelect.options).some(option => option.value === numberParam)) {
+        numberSelect.value = numberParam;
+    }
+}
+  
+GetParams();
+
 function selection_change() {
     max = document.getElementById("number_select").value;
     if (max == 0)

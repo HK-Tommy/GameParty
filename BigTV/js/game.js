@@ -11,21 +11,33 @@ let topics;
 
 function GetParams() {
   const urlParams = new URLSearchParams(window.location.search);
-        const timeParam = urlParams.get('time');
-        const themeParam = urlParams.get('theme');
+  const timeParam = urlParams.get('time');
+  const themeParam = urlParams.get('theme');
+  const autoPlayParam = urlParams.get('autoplay');
 
-        // 获取select元素
-        const timeSelect = document.getElementById('game-time');
-        const themeSelect = document.getElementById('game-theme');
+  // 获取select元素
+  const timeSelect = document.getElementById('game-time');
+  const themeSelect = document.getElementById('game-theme');
 
-        // 如果参数值在select选项中，则填充到select元素中
-        if (timeParam && Array.from(timeSelect.options).some(option => option.value === timeParam)) {
-            timeSelect.value = timeParam;
-        }
+  // 如果参数值在select选项中，则填充到select元素中
+  if (timeParam && Array.from(timeSelect.options).some(option => option.value === timeParam)) {
+      timeSelect.value = timeParam;
+  }
 
-        if (themeParam && Array.from(themeSelect.options).some(option => option.value === themeParam)) {
-            themeSelect.value = themeParam;
-        }
+  if (themeParam && Array.from(themeSelect.options).some(option => option.value === themeParam)) {
+    themeSelect.value = themeParam;
+  }
+
+  if (autoPlayParam){
+    autoPlay()
+  }
+}
+
+function autoPlay() {
+  const timeSelect = document.getElementById('game-time');
+  const themeSelect = document.getElementById('game-theme');
+  if (timeSelect.value != "-1" && themeSelect.value != "-1")
+    selectTopic()
 }
 
 GetParams();
