@@ -35,26 +35,18 @@ function selection_change() {
 function confirm() {
     input_value = document.getElementById("input").value;
     if (randomNumber != 0 && input_value != "") {
-        
-        if (input_value > max) {
-            document.getElementById("status").innerText = `數字已超出範圍之內`;
+        if (input_value > randomNumber) {
+            document.getElementById("status").innerText = `數字少於 ${input_value}`;
         }
+        else if (input_value < randomNumber)
+        {
+            document.getElementById("status").innerText = `數字大於 ${input_value}`;
+        } 
         else
         {
-            if (input_value > randomNumber) {
-                document.getElementById("status").innerText = `數字少於 ${input_value}`;
-            }
-            else if (input_value < randomNumber)
-            {
-                document.getElementById("status").innerText = `數字大於 ${input_value}`;
-            } 
-            else
-            {
-                alert("答對了 ! ")
-                resetGame()
-            }
+            alert("答對了 ! ")
+            resetGame()
         }
-        
     }
 }
 

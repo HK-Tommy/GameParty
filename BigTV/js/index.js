@@ -10,16 +10,16 @@ function gameplay() {
   document.getElementById("selection-screen").style.display = "none"
   document.getElementById("gameplay").style.display = "block"
 
-  const urlParams = new URLSearchParams(window.location.search);
-  urlParams.set("gameplay", 1);
+  var urlParams = new URLSearchParams(window.location.search);
+  urlParams.set('gameplay', 1);
 }
 
 function gameinfo() {
   document.getElementById("selection-screen").style.display = "none"
   document.getElementById("gameinfo").style.display = "block"
 
-  const urlParams = new URLSearchParams(window.location.search);
-  urlParams.set("gameinfo", 1)
+  var urlParams = new URLSearchParams(window.location.search);
+  urlParams.set('gameinfo', 1);
 }
 
 function GetParams() {
