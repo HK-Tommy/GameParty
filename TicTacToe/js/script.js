@@ -127,8 +127,13 @@ function gameComplete() {
 }
 
 function restartGame() {
-    if (confirm("是否要退出當前遊戲 ?")){
+    if (gameOver){
         location.reload();
+    }
+    else{
+        if (confirm("是否要退出當前遊戲 ?")){
+            location.reload();
+        }
     }
 }
 restartButton.addEventListener('click', restartGame);
