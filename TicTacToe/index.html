@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <title>井字過三關 | GameParty免費線上遊戲</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="井字過三關, 免費線上遊戲, GameParty, GameParty免費線上遊戲">
+    <link rel="icon" href="img/TicTacToe_Icon.png" type="image/icon type">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="container" id="gameContainer">
+        <div id="description">
+            <h1>井字過三關</h1>
+            <br>
+            <p>兩個玩家，一個打圈(◯)，一個打叉（✗），輪流在3乘3的格上打自己的符號，最先以橫、直、斜連成一線則為勝。</p>
+        </div>
+        <br>
+
+        <div class="vs-button">
+            <button id="twoPlayers">玩家對戰</button>
+            <button id="vsComputer">人機對戰</button>
+        </div>
+
+        <div class="game-section two-players" style="display: none;">
+            <h2 id="player">玩家 1</h2>
+            <p id="player-description">玩家 1 = X, 玩家 2 = O</p>
+            <div class="game-board" id="gameBoard">
+                <div class="row">
+                    <div class="cell" onclick="twoPMakeMove(0, 0)"></div>
+                    <div class="cell" onclick="twoPMakeMove(0, 1)"></div>
+                    <div class="cell" onclick="twoPMakeMove(0, 2)"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" onclick="twoPMakeMove(1, 0)"></div>
+                    <div class="cell" onclick="twoPMakeMove(1, 1)"></div>
+                    <div class="cell" onclick="twoPMakeMove(1, 2)"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" onclick="twoPMakeMove(2, 0)"></div>
+                    <div class="cell" onclick="twoPMakeMove(2, 1)"></div>
+                    <div class="cell" onclick="twoPMakeMove(2, 2)"></div>
+                </div>
+            </div>
+            <h1 class="winner-text" id="twoPlayersWinnerText"></h1>
+        </div>
+
+        <div class="game-section vs-computer" style="display: none;">
+            <h2 id="player">玩家</h2>
+            <p id="player-description">玩家 = X, 人機 = O</p>
+            <div class="game-board">
+                <div class="row">
+                    <div class="cell" onclick="vsComMakeMove(0, 0)"></div>
+                    <div class="cell" onclick="vsComMakeMove(0, 1)"></div>
+                    <div class="cell" onclick="vsComMakeMove(0, 2)"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" onclick="vsComMakeMove(1, 0)"></div>
+                    <div class="cell" onclick="vsComMakeMove(1, 1)"></div>
+                    <div class="cell" onclick="vsComMakeMove(1, 2)"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" onclick="vsComMakeMove(2, 0)"></div>
+                    <div class="cell" onclick="vsComMakeMove(2, 1)"></div>
+                    <div class="cell" onclick="vsComMakeMove(2, 2)"></div>
+                </div>
+            </div>
+            <h1 class="winner-text" id="vsComputerWinnerText"></h1>
+        </div>
+        <button id="restartButton" onclick="resetBoard()" style="display: none;">重新開始</button>
+
+
+    </div>
+    <footer>
+        <p>Version : 1.0</p>
+        <p>Last Update : 20/7/2024 16:15</p>
+        <p>Copyright © 2024 <a href="../index.html" style="color: black;">GameParty</a>. All rights reserved.</p>
+    </footer>
+
+
+
+    <!-- Script JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
