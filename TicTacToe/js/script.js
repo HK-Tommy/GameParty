@@ -6,6 +6,21 @@ const vsComputerSection = document.querySelector('.vs-computer');
 const restartButton = document.getElementById('restartButton');
 const gameDescription = document.getElementById("description");
 
+function GetParams() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const b_twoPlayers = urlParams.get('twoplayers');
+  
+    // 如果参数值在select选项中，则填充到select元素中
+    if (b_twoPlayers === "true") {
+        twoPlayersGame()
+    }
+    else if (b_twoPlayers === 'false')
+    {
+        vsComputerGame()
+    }
+}
+GetParams();
+
 function twoPlayersGame() {
     twoPlayersSection.style.display = "";
     vsComputerSection.remove();
@@ -128,11 +143,11 @@ function gameComplete() {
 
 function restartGame() {
     if (gameOver){
-        location.reload();
+        location = 'index.html'
     }
     else{
         if (confirm("是否要退出當前遊戲 ?")){
-            location.reload();
+            location = 'index.html'
         }
     }
 }
