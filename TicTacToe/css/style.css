@@ -89,6 +89,11 @@ h1 {
     align-items: center;
     flex-direction: column;
 }
+#backButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 footer {
     position: absolute;
     left: 0;
