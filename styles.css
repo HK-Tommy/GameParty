@@ -67,10 +67,21 @@ footer {
   margin: 10px;
   color: white;
   font-size: 8px;
-
 }
 
 @font-face {
   font-family: Font_Logo;
   src: url("./Assets/Fonts/Radeil3DDemoRuderight-4n7xD.otf");
+}
+@media only screen and (max-width: 480px) {
+  button {
+    font-size: 12px;
+    width: 100;
+  }
+  #game-container {
+    border: 0;
+  }
+  footer {
+    font-size: 6px;
+  }
 }
