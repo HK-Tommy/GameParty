@@ -9,7 +9,6 @@ body {
     height: 100vh;
     margin: 0;
 }
-
 h1{
     color: rgb(32, 249, 191);
     font-size: 50px;
@@ -27,7 +26,12 @@ p {
     border: 2px solid white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
 }
-
+#download {
+  padding: 1em;
+  margin: 10px;
+  color: rgb(15, 208, 251);
+  font-size: 18px;
+}
 button {
   padding: 17px 40px;
   border-radius: 50px;
