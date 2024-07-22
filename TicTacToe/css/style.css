@@ -100,13 +100,14 @@ footer {
     font-size: 12px;
     text-indent: 10px;
 }
-@media only screen and (min-width: 300px) {
+@media only screen and (max-width: 680px) {
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 150px;
+        margin: 0px;
+        margin-top: 120px;
         border: 2px solid;
         border-radius: 10px;
         width: 500px;
@@ -127,5 +128,13 @@ footer {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    footer {
+        font-size: 8px;
+    }
+    #description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
