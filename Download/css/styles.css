@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://hk-tommy.github.io/GameParty/T_Background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1{
+    color: rgb(32, 249, 191);
+    font-size: 50px;
+    margin: 0;
+    font-family: Font_Logo;
+}
+p {
+    color: rgb(228, 185, 105);
+    font-size: 25px;
+}
+
+#game-container {
+    text-align: center;
+    padding: 100px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+button {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+  width: 180px;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+#backButton {
+  color: gold;
+}
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: left;
+  padding: 1em;
+  margin: 10px;
+  color: white;
+  font-size: 8px;
+}
+
+@font-face {
+  font-family: Font_Logo;
+  src: url("https://hk-tommy.github.io/GameParty/Assets/Fonts/Radeil3DDemoRuderight-4n7xD.otf");
+}
+@media only screen and (max-width: 480px) {
+  button {
+    font-size: 12px;
+    width: 100;
+  }
+  #game-container {
+    border: 0;
+  }
+  footer {
+    font-size: 6px;
+  }
+}
