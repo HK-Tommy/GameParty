@@ -120,19 +120,18 @@ footer {
     }
     .vs-button button {
         font-size: 15px;
-        padding: 15px;
-        border-radius: 10px;
-        margin: 20px 20px 0 20px;
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
     }
     footer {
         font-size: 8px;
     }
     #description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 294px) {
+    .vs-button button {
         display: flex;
         justify-content: center;
         align-items: center;
