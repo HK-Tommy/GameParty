@@ -6,7 +6,13 @@ function GetParams() {
     auto_download = urlParams.get('download')
 
     if (auto_download === 'pc' || auto_download === 'android') {
-        download(auto_download)
+        if (auto_download === 'pc') {
+            download('windows')
+        }
+        else
+        {
+            download(auto_download)
+        }
     }
     if (b_app === 'true') {
         if (platform === "pc") {
@@ -27,7 +33,13 @@ function download(donwload_platform) {
     }
     else if (donwload_platform === 'windows')
     {
-        location = location.href + '&download=ingame'
+        if (b_app === 'true'  &&  auto_download != 'pc') {
+            location = location.href + '&download=ingame'
+        }
+        else
+        {
+            location = 'https://github.com/HK-Tommy/GameParty/releases/download/Windows/GameParty.msi'
+        }
     }
 }
 function back() {
