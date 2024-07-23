@@ -1,10 +1,5 @@
-function download(donwload_platform) {
-    if (donwload_platform === 'android') {
-        location = 'https://github.com/HK-Tommy/GameParty/releases/download/Android/GameParty.apk'
-    }
-}
 function GetParams() {
-    const urlParams = new URLSearchParams(window.location.search);
+    urlParams = new URLSearchParams(window.location.search);
     b_app = urlParams.get('app');
     platform = urlParams.get('platform')
     app_version = urlParams.get('version')
@@ -26,6 +21,17 @@ function GetParams() {
 }
 GetParams()
 
+function download(donwload_platform) {
+    if (donwload_platform === 'android') {
+        location = 'https://github.com/HK-Tommy/GameParty/releases/download/Android/GameParty.apk'
+    }
+    else if (donwload_platform === 'windows')
+    {
+        if (urlParams.get("download") != 'ingame') {
+            location = location.href + '&download=ingame'
+        }
+    }
+}
 function back() {
     if (b_app === 'true') {
         location = 'https://hk-tommy.github.io/GameParty/index.html?app=true&platform=' + platform
