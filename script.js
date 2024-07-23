@@ -1,4 +1,5 @@
-const app_lastVersion = 1.1
+const app_pc_lastVersion = '1.0'
+const app_android_lastVersion = '1.1'
 
 function GetParams() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -11,9 +12,18 @@ function GetParams() {
     }
 
     if (app_version != null) {
-        if (b_app === "true" && app_lastVersion != app_version) {
-            if (confirm("當前有新版本可用，是否要前往下載最新版本？")){
-                location = 'APP/Download/index.html?app=' + b_app + '&platform=' + platform
+        if (platform === 'android') {
+            if (b_app === "true" && app_android_lastVersion != app_version) {
+                if (confirm("當前有新版本可用，是否要前往下載最新版本？")){
+                    location = 'APP/Download/index.html?app=' + b_app + '&version=' + app_android_lastVersion + '&platform=' + platform
+                }
+            }
+        } 
+        else if  (platform === 'pc') {
+            if (b_app === "true" && app_pc_lastVersion != app_version) {
+                if (confirm("當前有新版本可用，是否要前往下載最新版本？")){
+                    location = 'APP/Download/index.html?app=' + b_app + '&version=' + app_pc_lastVersion + '&platform=' + platform
+                }
             }
         }
     }

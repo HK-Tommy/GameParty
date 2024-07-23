@@ -13,9 +13,10 @@
             <h1>GameParty</h1>
             <p>應用程式版下載</p>
             <br>
-            <button onclick="download()">Android</button>
+            <button onclick="download('android')" id="download_android">Android</button>
+            <button onclick="download('windows')" id="download_windows">Windows</button>
             <br><br>
-            <small style="color: white;" id="version">Last Version : v1.1</small>
+            <small style="color: white;display:none;" id="version">Last Version : v1.1</small>
             <br><br><br>
             <a onclick="back()" id="backButton">返回GameParty</a>
         </div>
