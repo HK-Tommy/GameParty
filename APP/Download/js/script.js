@@ -27,9 +27,7 @@ function download(donwload_platform) {
     }
     else if (donwload_platform === 'windows')
     {
-        if (urlParams.get("download") != 'ingame') {
-            location = location.href + '&download=ingame'
-        }
+        location = location.href + '&download=ingame'
     }
 }
 function back() {
