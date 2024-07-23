@@ -20,7 +20,7 @@ function GetParams() {
     if (app_version != null) {
         if (b_app === "true" && app_lastVersion != app_version) {
             if (confirm("當前有新版本可用，是否要前往下載最新版本？")){
-                location = 'APP/Download/index.html?app=' + b_app + '&version=' + app_version
+                location = 'APP/Download/index.html?app=' + b_app
             }
         }
     }
