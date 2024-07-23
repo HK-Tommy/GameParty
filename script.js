@@ -22,7 +22,7 @@ GetParams();
 
 function redirect(url) {
     if (platform === 'pc') {
-        window.open(url, '_self');
+        location = url
     }
     else
     {
