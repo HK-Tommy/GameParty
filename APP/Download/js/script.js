@@ -7,7 +7,7 @@ function GetParams() {
     const urlParams = new URLSearchParams(window.location.search);
     b_app = urlParams.get('app');
 
-    ocument.getElementById("version").textContent = 'Last Version : v' + app_version
+    ocument.getElementById("version").textContent = 'Last Version : v' + String(app_version)
 }
 GetParams()
 
