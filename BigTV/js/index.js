@@ -2,8 +2,30 @@
 then close all select boxes: */
 //document.addEventListener("click", closeAllSelect);
 
+function GetParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const gamePlayParam = urlParams.get('gameplay');
+  const gameInfoParam = urlParams.get('gameinfo');
+  platform = urlParams.get('platform')
+  b_app = urlParams.get('app');
+
+  if (gamePlayParam == 1) {
+    gameplay()
+  }
+  else if (gameInfoParam == 1){
+    gameinfo()
+  }
+}
+
+GetParams()
+
 function redirect(){
-  window.location.href = '../BigTV/game.html';
+  if (b_app === 'true') {
+    window.location.href = '../BigTV/game.html?&app=' + b_app + '&platform=' + platform;
+  }
+  else{
+    window.location.href = '../BigTV/game.html';
+  }
 }
 
 function gameplay() {
@@ -22,17 +44,17 @@ function gameinfo() {
   urlParams.set('gameinfo', 1);
 }
 
-function GetParams() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const gamePlayParam = urlParams.get('gameplay');
-  const gameInfoParam = urlParams.get('gameinfo');
-
-  if (gamePlayParam == 1) {
-    gameplay()
+function quitGame()
+{
+  if (b_app === 'true')
+  {
+    location = '../index.html?app=' + b_app + '&platform=' + platform
   }
-  else if (gameInfoParam == 1){
-    gameinfo()
+  else{
+    location = '../index.html'
   }
 }
 
-GetParams()
+function reload() {
+  location.reload()
+}

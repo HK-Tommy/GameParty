@@ -9,6 +9,8 @@ const gameDescription = document.getElementById("description");
 function GetParams() {
     const urlParams = new URLSearchParams(window.location.search);
     const b_twoPlayers = urlParams.get('twoplayers');
+    platform = urlParams.get('platform')
+    b_app = urlParams.get('app');
   
     // 如果参数值在select选项中，则填充到select元素中
     if (b_twoPlayers === "true") {
@@ -143,12 +145,23 @@ function gameComplete() {
 
 function restartGame() {
     if (gameOver){
-        location = 'index.html'
+        location.reload()
     }
     else{
         if (confirm("是否要退出當前遊戲 ?")){
-            location = 'index.html'
+            location.reload()
         }
     }
 }
 restartButton.addEventListener('click', restartGame);
+
+function quitGame()
+{
+  if (b_app === 'true')
+  {
+    location = '../index.html?app=' + b_app + '&platform=' + platform
+  }
+  else{
+    location = '../index.html'
+  }
+}

@@ -18,6 +18,8 @@ function GetParams() {
   // 获取select元素
   const timeSelect = document.getElementById('game-time');
   const themeSelect = document.getElementById('game-theme');
+  platform = urlParams.get('platform')
+  b_app = urlParams.get('app');
 
   // 如果参数值在select选项中，则填充到select元素中
   if (timeParam && Array.from(timeSelect.options).some(option => option.value === timeParam)) {
@@ -172,6 +174,16 @@ function resetGame() {
     clearInterval(timerInterval);
 }
 
+function quitGame()
+{
+  if (b_app === 'true')
+  {
+    location = './index.html?app=' + b_app + '&platform=' + platform
+  }
+  else{
+    location = './index.html'
+  }
+}
 
 var x, i, j, l, ll, selElmnt, a, b, c;
 /* Look for any elements with the class "custom-select": */

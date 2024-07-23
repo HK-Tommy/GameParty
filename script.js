@@ -2,7 +2,7 @@ const app_lastVersion = 1.1
 
 function GetParams() {
     const urlParams = new URLSearchParams(window.location.search);
-    const b_app = urlParams.get('app');
+    b_app = urlParams.get('app');
     const app_version = urlParams.get('version');
     platform = urlParams.get('platform');
     
@@ -21,8 +21,8 @@ function GetParams() {
 GetParams();
 
 function redirect(url) {
-    if (platform === 'pc') {
-        location = url
+    if (b_app === 'true') {
+        location = url + '?app=' + b_app + '&platform=' + platform
     }
     else
     {

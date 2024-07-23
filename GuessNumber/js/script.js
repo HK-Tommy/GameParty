@@ -4,6 +4,8 @@ let onSelect;
 function GetParams() {
     const urlParams = new URLSearchParams(window.location.search);
     const numberParam = urlParams.get('number');
+    platform = urlParams.get('platform')
+    b_app = urlParams.get('app');
   
     // 获取select元素
     const numberSelect = document.getElementById('number_select');
@@ -64,4 +66,15 @@ function resetGame(){
     document.getElementById("control").style.display = "none";
     document.getElementById("status").innerText = ``;
     document.getElementById("backButton").style.display = "block";
+}
+
+function quitGame()
+{
+  if (b_app === 'true')
+  {
+    location = '../index.html?app=' + b_app + '&platform=' + platform
+  }
+  else{
+    location = '../index.html'
+  }
 }
