@@ -1,17 +1,10 @@
 const app_lastVersion = 1.1
 
-function redirect(url) {
-    window.open(url, '_blank');
-}
-setTimeout(function() {
-    document.getElementById("loader").style.display = 'none';
-    document.getElementById('game-container').style.display = '';
-    document.getElementById('footer').style.display = ''
-}, 2000);
 function GetParams() {
     const urlParams = new URLSearchParams(window.location.search);
     const b_app = urlParams.get('app');
     const app_version = urlParams.get('version');
+    const platform = urlParams.get('platform');
     
     if (b_app === 'true') {
         document.getElementById("download").style.display = 'none'
@@ -26,3 +19,18 @@ function GetParams() {
     }
 }
 GetParams();
+
+function redirect(url) {
+    if (platform === 'pc') {
+        window.open(url, '_self');
+    }
+    else
+    {
+        window.open(url, '_blank');
+    }
+}
+setTimeout(function() {
+    document.getElementById("loader").style.display = 'none';
+    document.getElementById('game-container').style.display = '';
+    document.getElementById('footer').style.display = ''
+}, 2000);
