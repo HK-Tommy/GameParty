@@ -1,5 +1,5 @@
 const app_pc_lastVersion = '1.0'
-const app_android_lastVersion = '1.1'
+const app_android_lastVersion = '1.2'
 
 function GetParams() {
     const urlParams = new URLSearchParams(window.location.search);
