@@ -11,16 +11,16 @@ function GetParams() {
         document.getElementById("version").textContent = 'Last Version : v' + app_version
     }
     else {
-        document.getElementById("version").textContent = 'Last Version : v1.0'
+        document.getElementById("version").textContent = 'Last Version : v1.1'
     }
 }
 GetParams()
 
 function back() {
     if (b_app === 'true') {
-        location = '../index.html?app=true'
+        location = 'https://hk-tommy.github.io/GameParty/index.html?app=true'
     }
     else {
-        location = '../index.html'
+        location = 'https://hk-tommy.github.io/GameParty/index.html'
     }
 }
