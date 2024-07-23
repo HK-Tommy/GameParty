@@ -4,7 +4,7 @@ function GetParams() {
     const urlParams = new URLSearchParams(window.location.search);
     const b_app = urlParams.get('app');
     const app_version = urlParams.get('version');
-    const platform = urlParams.get('platform');
+    platform = urlParams.get('platform');
     
     if (b_app === 'true') {
         document.getElementById("download").style.display = 'none'
